@@ -57,7 +57,7 @@ def main():
     list_campaing = df['Campanha'].unique()
     for campaing in list_campaing:
         x = df[df['Campanha'] == campaing]
-        x.to_excel(f'data/{campaing}.xlsx', index=False)
+        x.to_csv(f'data/{campaing}.csv', sep='|', index=False)
     
     if 'nan.xlsx' in os.listdir('data'):
         os.remove('data/nan.xlsx')

@@ -21,7 +21,7 @@ def main():
         os.makedirs('data')
     for campaing in list_campaing:
         x = df[df['Campanha'] == campaing]
-        x.to_excel(f'data/{campaing}.xlsx', index=False)
+        x.to_excel(f'data/{campaing}.xlsx', sep='|')
     
 if __name__ == '__main__':
     main()
